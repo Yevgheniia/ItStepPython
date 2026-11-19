@@ -50,19 +50,48 @@
 #     print("Оформлено доставку")
 
 # # Завдання 6
+#
+# text = input("Введіть текст: ")
+#
+# letter_count = 0
+# number_count = 0
+#
+# for symbol in text:
+#     if symbol.isdigit():
+#         number_count += 1
+#     elif symbol.isalpha():
+#         letter_count += 1
+#
+# print(f"Літер: {letter_count}\nЦифр: {number_count}")
 
-text = input("Введіть текст: ")
+# # Завдання 7
 
-letter_count = 0
-number_count = 0
+while True:
+    letter = False
+    number = False
+    password = input("Введіть пароль: ")
 
-for symbol in text:
-    if symbol.isdigit():
-        number_count += 1
-    elif symbol.isalpha():
-        letter_count += 1
+    if len(password) < 9:
+        print("Пароль менше за 8 символів")
+        continue
 
-print(f"Літер: {letter_count}\nЦифр: {number_count}")
+    for i in password:
+        if i.isdigit():
+            letter = True
+
+        if i.isalpha():
+            number = True
+
+
+    if letter == False:
+        print("Немає символів в паролі")
+        continue
+    elif number == False:
+        print("Немає цифр в паролі")
+        continue
+    else:
+        print("Пароль надійний")
+        break
 
 
 
