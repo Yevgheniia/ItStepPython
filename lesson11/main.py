@@ -1,27 +1,68 @@
 # # Завдання 1
-# str = input("Введіть рядок: ")
+# text = input("Введіть рядок: ")
 # symb = input("Введіть символ: ")
 # count = 0
 #
-# print(f"Кількість символів {str.count(symb)}")
+# print(f"Кількість символів {text.count(symb)}")
 #
-# for i in str:
+# for i in text:
 #     if i == symb:
 #         count += 1
 # print(f"Кількість символів {count}")
 
 # # Завдання 2
 
-str = input("Введіть рядок: ")
-word = "python"
+# text = input("Введіть рядок: ")
+# word = "python"
+#
+# print(f"Кількість символів в рядку: {len(text)}")
+# if word in text:
+#     print("Слово python є в строці")
+# else:
+#     print("Слово python немає в строці")
+#
+# count = text.count("s") + text.count("z")+ text.count("h")
+#
+# print(f"Кількість символів {count}")
 
-print(f"Кількість символів в рядку: {len(str)}")
-if word in str:
-    print("Слово python є в строці")
-else:
-    print("Слово python немає в строці")
+# # Завдання 3
+# text = input("Введіть текст: ")
+#
+# result = text.replace(" ", "-")
+# print(f"Змінений текст: {result}")
 
-count = str.count("s") + str.count("z")+ str.count("h")
+# # Завдання 4
 
-print(f"Кількість символів {count}")
+# text = input("Введіть текст: ")
+# word = input("Введіть слово: ")
+# count = 0
+#
+# print(text.count(word))
+
+# # Завдання 5
+
+# items = input("Введіть ваші речі: ")
+# items = items.lower()
+#
+# if "ніж" in items or "гроші" in items or "отрута" in items:
+#     print("У вас є речі які заборонено перевозити")
+# else:
+#     print("Оформлено доставку")
+
+# # Завдання 6
+
+text = input("Введіть текст: ")
+
+letter_count = 0
+number_count = 0
+
+for symbol in text:
+    if symbol.isdigit():
+        number_count += 1
+    elif symbol.isalpha():
+        letter_count += 1
+
+print(f"Літер: {letter_count}\nЦифр: {number_count}")
+
+
 
