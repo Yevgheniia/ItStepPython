@@ -91,42 +91,75 @@
 
 # # Завдання 6
 
-bank_client  = [100, 200, 300, 500]
+# bank_client  = [100, 200, 300, 500]
+#
+# while True:
+#     comand = int(input("Виберіть одну з команд \n1 - Додати клієнта \n2 - Видалити клієнта \n3 - Поповнити рахунок \n4 - Зняти кошти \n5 - Вихід \nВаш вибір: "))
+#
+#     if comand == 1:
+#         bank_client.append(0)
+#     elif comand == 2:
+#         while True:
+#             index_client = int(input("Введіть індекс клієнта: "))
+#             if index_client < 0 or index_client >= len(bank_client):
+#                 print("Ви ввели невірний індекс клієнта")
+#                 continue
+#             else:
+#                 bank_client.pop(index_client)
+#                 break
+#     elif comand == 3:
+#         while True:
+#             index_client = int(input("Введіть індекс клієнта: "))
+#             if index_client < 0 or index_client >= len(bank_client):
+#                 print("Ви ввели невірний індекс клієнта")
+#                 continue
+#             else:
+#                 deposit_amount = int(input("Введіть суму поповнення: "))
+#                 bank_client[index_client] += deposit_amount
+#                 break
+#     elif comand == 4:
+#         while True:
+#             index_client = int(input("Введіть індекс клієнта: "))
+#             if index_client < 0 or index_client >= len(bank_client):
+#                 print("Ви ввели невірний індекс клієнта")
+#                 continue
+#             else:
+#                 deposit_amount = int(input("Введіть суму зняття: "))
+#                 bank_client[index_client] -= deposit_amount
+#                 break
+#     elif comand == 5:
+#         break
+#
+#     else:
+#         print("Введіть вірну команду: ")
+#         continue
+#
+# print(bank_client)
+
+# # Завдання 7
+price_products  = [120, 210, 310, 510]
 
 while True:
-    comand = int(input("Виберіть одну з команд \n1 - Додати клієнта \n2 - Видалити клієнта \n3 - Поповнити рахунок \n4 - Зняти кошти \n5 - Вихід \nВаш вибір: "))
+    comand = int(input("Виберіть одну з команд \n1 - Додати товар до кошика  \n2 - Видалити товар з кошика \n3 - Очистити кошик \n4 - Вивести загальну ціну \n5 - Вихід \nВаш вибір: "))
 
     if comand == 1:
-        bank_client.append(0)
+        prod_price = int(input("Введіть вартість продукту: "))
+        price_products.append(prod_price)
     elif comand == 2:
         while True:
-            index_client = int(input("Введіть індекс клієнта: "))
-            if index_client < 0 or index_client >= len(bank_client):
-                print("Ви ввели невірний індекс клієнта")
+            index_product = int(input("Який товар видалити, вкажіть індекс: "))
+            if index_product < 0 or index_product >= len(price_products):
+                print("Ви ввели невірний індекс товара")
                 continue
             else:
-                bank_client.pop(index_client)
+                price_products.pop(index_product)
                 break
     elif comand == 3:
-        while True:
-            index_client = int(input("Введіть індекс клієнта: "))
-            if index_client < 0 or index_client >= len(bank_client):
-                print("Ви ввели невірний індекс клієнта")
-                continue
-            else:
-                deposit_amount = int(input("Введіть суму поповнення: "))
-                bank_client[index_client] += deposit_amount
-                break
-    elif comand == 3:
-        while True:
-            index_client = int(input("Введіть індекс клієнта: "))
-            if index_client < 0 or index_client >= len(bank_client):
-                print("Ви ввели невірний індекс клієнта")
-                continue
-            else:
-                deposit_amount = int(input("Введіть суму зняття: "))
-                bank_client[index_client] -= deposit_amount
-                break
+        for i in range(len(price_products)):
+            price_products.pop(i)
+
+    elif comand == 4:
+        print("Сума сума кошика:", sum(price_products))
     elif comand == 5:
         break
 
@@ -134,5 +167,5 @@ while True:
         print("Введіть вірну команду: ")
         continue
 
-print(bank_client)
+print(price_products)
 
